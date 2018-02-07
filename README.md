@@ -16,7 +16,7 @@ In which college class would you be most likely to study a syzygy?
 2. Philosophy  
 3. Russian  
 
-Open IE returns subject entity "In which college class would you be most likely" with relation "study" and object entity "syzygy". Then we would search either the subject or object entity (the one that doesn't have which/what/how/where/etc) with answer choices and assign a probability distribution over the answer choices.
+Open IE returns subject entity "In which college class would you be most likely" with relation "study" and object entity "syzygy". Then we would search either the subject or object entity (the one that doesn't have which / what / how / where / etc) with answer choices and assign a probability distribution over the answer choices.
 
 Using the second question as an example, CoreNLP also produces the following dependenies and parse trees that can be used for determining key words/phrases:
 
