@@ -5,14 +5,14 @@ Basic pipeline for answering trivia questions from the popular mobile game HQ wi
 Which organization began as the North West Police Agency?  
 	FBI	  
 	NRA  
--	Pinkerton  
+	Pinkerton*  
 
 Stanford CoreNLP's Named Entity Recognition annotator identifies "North West Police Agency" as an organization, so we can query to Google Custom Search with each of the answer choices to see which choice is the most probable.
 
 Another useful annotator I started using is the Open Information Extraction (Open IE), its use is shown below:
 
 In which college class would you be most likely to study a syzygy?  
--	Astronomy  
+	Astronomy*  
 	Philosophy  
 	Russian  
 
