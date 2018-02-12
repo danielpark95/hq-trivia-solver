@@ -22,18 +22,17 @@ class Pipeline {
 	}
 	
 	
-	
-	
     public static void main(String[] args) {
         System.out.println("Building pipeline...");
         // creates a StanfordCoreNLP object, with POS tagging, parsing
         Properties props = new Properties();
-        props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, parse");
+        props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, parse, natlog, openie");
         StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
         System.out.println("Built pipline!");
 
         // read some text in the text variable
         String text = "In which college class would you be most likely to study a syzygy?";
+        
         System.out.println("Text = " + text);
         // create an empty Annotation just with the given text
         Annotation document = new Annotation(text);
