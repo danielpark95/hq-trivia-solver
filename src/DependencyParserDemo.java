@@ -23,7 +23,7 @@ public class DependencyParserDemo  {
   public static void main(String[] args) {
     String modelPath = DependencyParser.DEFAULT_MODEL;
     String taggerPath = "edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger";
-
+    
     for (int argIndex = 0; argIndex < args.length; ) {
       switch (args[argIndex]) {
         case "-tagger":
@@ -39,16 +39,16 @@ public class DependencyParserDemo  {
       }
     }
 
-    String text = "I can almost always tell when movies use fake dinosaurs.";
+    String text = "Which organization began as the North West Police Agency?";
 
     MaxentTagger tagger = new MaxentTagger(taggerPath);
     DependencyParser parser = DependencyParser.loadFromModelFile(modelPath);
-
+    
     DocumentPreprocessor tokenizer = new DocumentPreprocessor(new StringReader(text));
     for (List<HasWord> sentence : tokenizer) {
       List<TaggedWord> tagged = tagger.tagSentence(sentence);
       GrammaticalStructure gs = parser.predict(tagged);
-
+      
       // Print typed dependencies
       log.info(gs);
     }
