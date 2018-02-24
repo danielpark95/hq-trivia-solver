@@ -1,5 +1,5 @@
 ## HQ Trivia Solver
-Basic pipeline for answering trivia questions from the popular mobile game HQ with Stanford CoreNLP API and Google Custom Search API in Java.
+Program for answering trivia questions from the popular mobile game HQ with Stanford CoreNLP API and Google Custom Search API in Java.
 
 ## Sample Questions
 Which organization began as the North West Police Agency?  
