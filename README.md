@@ -29,8 +29,6 @@ Program for answering trivia questions from the popular mobile game HQ with Stan
 >Question = "In which college class would you be most likely to study a syzygy?"  
 >OpenIE Output = {"you" /subj, "study" /relation, "syzygy" /obj}  
 
-Open IE returns subject entity "you" with relation "study" and object entity "syzygy". We choose either the subject or object entity (the one that doesn't have which / what / how / where / etc) and use it as a feature for our model.  
-  
 ***Grammatical Dependencies:***  
 >Dependencies = -> likely/JJ (root)  
 >  -> class/NN (nmod)  
