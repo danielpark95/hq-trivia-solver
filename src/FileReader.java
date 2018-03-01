@@ -3,12 +3,10 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-import javax.print.DocFlavor.URL;
-
-public class FileHandler {
+public class FileReader {
 	ArrayList<Question> questions;
 
-	public FileHandler(String fileName) {
+	public FileReader(String fileName) {
 		try {
 			FileInputStream fstream = new FileInputStream(fileName);
 			BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
@@ -28,7 +26,9 @@ public class FileHandler {
 					}
 					//Correct Answer
 					else if (line.startsWith("*")) {
-						q.addAnswer(line.substring(1, line.length()).trim());
+						String answer = line.substring(1, line.length()).trim();
+						q.addAnswer(answer);
+						q.setCorrectAnswer(answer);
 					}
 					//Wrong Answer
 					else {
@@ -41,12 +41,9 @@ public class FileHandler {
 				}
 			}
 			fstream.close();
+			System.out.println("Successfully read file!\n");
 		} catch (Exception e) {
 			System.err.println("Error: " + e.getMessage());
 		}
-	}
-
-	public ArrayList<Question> getQuestions() {
-		return questions;
 	}
 }
