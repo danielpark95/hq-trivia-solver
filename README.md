@@ -2,23 +2,23 @@
 Program for answering trivia questions from the popular mobile game HQ with Stanford CoreNLP API, MediaWiki API, and Google Custom Search API in Java.
 
 ## Program Demo
-***Example 1.***  
-Question: Which NBA franchise has NOT retired any jersey numbers?  
-Answer Choices: [Brooklyn Nets, Dallas Mavericks, Los Angeles Clippers]  
-  
-My guess is: Los Angeles Clippers  
+***Example 1 ***  
+>Question: Which NBA franchise has NOT retired any jersey numbers?  
+>Answer Choices: [Brooklyn Nets, Dallas Mavericks, Los Angeles Clippers]  
+>  
+>My guess is: Los Angeles Clippers  
 
-***Example 2.***  
-Question: Which of these is a standard cheerleading jump?  
-Answer Choices: [Herkie, Flap, Striker]  
-  
-My guess is: Herkie  
+***Example 2 ***  
+>Question: Which of these is a standard cheerleading jump?  
+>Answer Choices: [Herkie, Flap, Striker]  
+>  
+>My guess is: Herkie  
 
-***Example 3.*** 
-Question: Which of these international foods is NOT a kind of dumpling?  
-Answer Choices: [Pelmeni, Pecel, Pierogi]  
-  
-My guess is: Pecel  
+***Example 3 ***  
+>Question: Which of these international foods is NOT a kind of dumpling?  
+>Answer Choices: [Pelmeni, Pecel, Pierogi]  
+>  
+>My guess is: Pecel  
   
 ## NLP
 ***Named Entity Recognition:***  
