@@ -1,4 +1,4 @@
-HQ-Trivia-Solver
+# HQ-Trivia-Solver
 
 Program for answering trivia questions from the popular mobile game HQ with Bing Custom Search API, MediaWiki API, and NLTK API in Python 3.
 
