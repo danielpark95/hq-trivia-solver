@@ -1,6 +1,6 @@
 # HQ-Trivia-Solver
 
-Program for answering trivia questions from the popular mobile game HQ with Bing Custom Search API, MediaWiki API, and NLTK in Python 3.
+Program for answering trivia questions from the popular mobile game HQ with Bing Web Search API, MediaWiki API, and NLTK in Python 3.
 
 ## Usage
 ### pip3
@@ -24,9 +24,15 @@ The following command runs the Bing Search Model and Wiki Search Model on sample
 ```
 $ python3 test.py
 ```
+## Models
+***Bing Search Model***
+The Bing Search Model uses Microsoft Azure's Bing Web Search API to retrieve a search term's top 5 results, and then counts how many times each of the answer choices appear across the 5 pages. 
 
-## Program Demo
-***Both Models Correct Example 1***  
+***Wikipedia Answer Model***
+The Wikipedia Answer Model uses MediaWiki's Web API to retrieve JSON pages of Wikipedia articles for each of the answer choices, and then counts the number of times the key words co-occur within a 10-15 word window.  
+
+## Sample Results 
+***Example 1***  
 >Q: Which of these is a standard cheerleading jump?  
 >A: ['Herkie', 'Flap', 'Striker']  
 >  
@@ -40,7 +46,7 @@ $ python3 test.py
 >Guess is correct!  
 >Wiki Search Model took 0.8776249885559082 seconds  
 
-***Both Models Correct Example 2***  
+***Example 2***  
 >Q: Which of these companies is NOT owned by Williams-Sonoma, Inc.?  
 >A: ['Pottery Barn', 'West Elm', 'Crate & Barrel']  
 >  
@@ -54,7 +60,7 @@ $ python3 test.py
 >Guess is correct!  
 >Wiki Search Model took 1.7192120552062988 seconds  
 
-***Bing Model Wrong, Wiki Model Correct Example***  
+***Example 3***  
 >Q: In a standard deck of playing cards, which king is holding an axe and facing sideways?  
 >A: ['King of Diamonds', 'King of Hearts', 'King of Clubs']  
 >  
@@ -68,7 +74,7 @@ $ python3 test.py
 >Guess is correct!  
 >Wiki Search Model took 1.7012982368469238 seconds  
 
-***Bing Model Correct, Wiki Model Wrong Example***  
+***Example 4***  
 >Q: Which is the only actor to appear as both a student and a guest on "Inside the Actors Studio"?  
 >A: ['Ryan Gosling', 'Tobey Maguire', 'Bradley Cooper']  
 >  
@@ -111,10 +117,5 @@ $ python3 test.py
 ***Syntactic Parses:***  
 >Parse tree = (ROOT (SBARQ (WHPP (IN In) (WHNP (WDT which) (NN college) (NN class))) (SQ (MD would) (NP (PRP you)) (VP (VB be) (ADJP (RBS most) (JJ likely) (S (VP (TO to) (VP (VB study) (NP (DT a) (NN syzygy)))))))) (. ?)))
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
 ## Acknowledgments
-
-* I'd like to thank Professor Tim Hunter for guiding me with the project and providing key insights necessary to complete the project as part of UCLA's Student Research Program 199.
+I'd like to thank Professor Tim Hunter for guiding me with the project and providing key insights necessary to complete the project as part of UCLA's Student Research Program 199.
