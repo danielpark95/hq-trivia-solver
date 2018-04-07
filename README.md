@@ -1,3 +1,52 @@
+HQ-Trivia-Solver
+
+Program for answering trivia questions from the popular mobile game HQ with Bing Custom Search API, MediaWiki API, and NLTK API in Python 3.
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+What things you need to install the software and how to install them
+
+```
+pip3 install nltk
+pip3 install beautifulsoup4
+```
+
+### Installing
+
+A step by step series of examples that tell you have to get a development env running
+
+Say what the step will be
+
+```
+Give the example
+```
+
+And repeat
+
+```
+until finished
+```
+
+End with an example of getting some data out of the system or using it for a little demo
+
+## Running the tests
+
+```
+python3 test.py
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* I'd like to thank Professor Tim Hunter for guiding me with the project and providing key insights necessary to complete the project as part of UCLA's Student Research Program 199.
+
 ## HQ Trivia Solver
 Program for answering trivia questions from the popular mobile game HQ with Stanford CoreNLP API, MediaWiki API, and Google Custom Search API in Java.
 
