@@ -14,6 +14,9 @@ What things you need to install the software and how to install them
 pip3 install nltk
 pip3 install beautifulsoup4
 pip3 install requests
+pip3 install markdown
+pip3 install html5lib
+pip3 install urllib3
 ```
 
 ### Installing
