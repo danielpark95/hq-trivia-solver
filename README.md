@@ -25,10 +25,10 @@ The following command runs the Bing Search Model and Wiki Search Model on sample
 $ python3 test.py
 ```
 ## Models
-***Bing Search Model***
+***Bing Search Model***   
 The Bing Search Model uses Microsoft Azure's Bing Web Search API to retrieve a search term's top 5 results, and then counts how many times each of the answer choices appear across the 5 pages. 
 
-***Wikipedia Answer Model***
+***Wikipedia Answer Model***   
 The Wikipedia Answer Model uses MediaWiki's Web API to retrieve JSON pages of Wikipedia articles for each of the answer choices, and then counts the number of times the key words co-occur within a 10-15 word window.  
 
 ## Sample Results 
