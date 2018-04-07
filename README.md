@@ -3,14 +3,13 @@
 Program for answering trivia questions from the popular mobile game HQ with Bing Custom Search API, MediaWiki API, and NLTK in Python 3.
 
 ## Usage
-
+### pip3
 If you don't already have pip3 installed, you'll need to run the following command in your terminal before proceeding:
 ```
 $ sudo apt-get install python3-pip
 ```
-
+### Python dependencies
 You'll need to install the following python modules:
-
 ```
 $ pip3 install nltk
 $ pip3 install beautifulsoup4
@@ -20,8 +19,8 @@ $ pip3 install html5lib
 $ pip3 install urllib3
 ```
 
-### Running the tests
-This script runs the Bing Search Model and Wiki Search Model on sample questions located in /src/input_files
+### Testing
+The following command runs the Bing Search Model and Wiki Search Model on sample questions located in /src/input_files and outputs the results:
 ```
 $ python3 test.py
 ```
