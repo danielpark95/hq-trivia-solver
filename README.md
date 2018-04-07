@@ -70,9 +70,9 @@ The Wikipedia Answer Model uses MediaWiki's Web API to retrieve JSON pages of Wi
 >Bing Search Model took 4.7103049755096436 seconds  
 >  
 >WIKI SEARCH MODEL  
->Wiki Guess: Oklahoma City
-> Guess is correct!  
-> Wiki Search Model took 1.8565549850463867 seconds  
+>Wiki Guess: Oklahoma City  
+>Guess is correct!  
+>Wiki Search Model took 1.8565549850463867 seconds  
 
 ***Example 4***  
 >Q:Which of these mammals averages the largest litter?  
@@ -82,6 +82,7 @@ The Wikipedia Answer Model uses MediaWiki's Web API to retrieve JSON pages of Wi
 >Bing Guess: Naked mole rat  
 >Guess is correct!  
 >Bing Search Model took 8.854448318481445 seconds  
+>  
 >WIKI SEARCH MODEL  
 >Wiki Guess: Naked mole rat  
 >Guess is correct!  
