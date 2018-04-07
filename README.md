@@ -9,21 +9,21 @@ If you don't already have pip3 installed, you'll need to run the following comma
 $ sudo apt-get install python3-pip
 ```
 
-What things you need to install the software and how to install them
+You'll need to install the following python modules:
 
 ```
-pip3 install nltk
-pip3 install beautifulsoup4
-pip3 install requests
-pip3 install markdown
-pip3 install html5lib
-pip3 install urllib3
+$ pip3 install nltk
+$ pip3 install beautifulsoup4
+$ pip3 install requests
+$ pip3 install markdown
+$ pip3 install html5lib
+$ pip3 install urllib3
 ```
 
 ### Running the tests
-
+This script runs the Bing Search Model and Wiki Search Model on sample questions located in /src/input_files
 ```
-python3 test.py
+$ python3 test.py
 ```
 
 ## Program Demo
