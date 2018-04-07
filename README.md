@@ -41,11 +41,11 @@ $ python3 test.py
 ***Both Models Correct Example 2***  
 >Q: Which of these companies is NOT owned by Williams-Sonoma, Inc.?  
 >A: ['Pottery Barn', 'West Elm', 'Crate & Barrel']  
->--BING SEARCH MODEL--  
+><BING SEARCH MODEL>  
 >Bing Guess: Crate & Barrel  
 >Guess is correct!  
 >Bing Search Model took 4.79827880859375 seconds  
->--WIKI SEARCH MODEL--  
+><WIKI SEARCH MODEL>  
 >Wiki Guess: Crate & Barrel  
 >Guess is correct!  
 >Wiki Search Model took 1.7192120552062988 seconds  
