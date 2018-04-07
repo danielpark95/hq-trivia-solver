@@ -61,33 +61,30 @@ The Wikipedia Answer Model uses MediaWiki's Web API to retrieve JSON pages of Wi
 >Wiki Search Model took 1.7192120552062988 seconds  
 
 ***Example 3***  
->Q: In a standard deck of playing cards, which king is holding an axe and facing sideways?  
->A: ['King of Diamonds', 'King of Hearts', 'King of Clubs']  
+>Q: Which city’s busiest airport is NOT named after an elected politician?  
+>A: ['Oklahoma City', 'Houston', 'Las Vegas']  
 >  
 >BING SEARCH MODEL  
->Bing Guess: King of Hearts  
->Wrong!  
->Bing Search Model took 2.2626800537109375 seconds  
+>Bing Guess: Oklahoma City  
+>Guess is correct!  
+>Bing Search Model took 4.7103049755096436 seconds  
 >  
 >WIKI SEARCH MODEL  
->Wiki Guess: King of Diamonds  
->Guess is correct!  
->Wiki Search Model took 1.7012982368469238 seconds  
+>Wiki Guess: Oklahoma City
+> Guess is correct!  
+> Wiki Search Model took 1.8565549850463867 seconds  
 
 ***Example 4***  
->Q: Which is the only actor to appear as both a student and a guest on "Inside the Actors Studio"?  
->A: ['Ryan Gosling', 'Tobey Maguire', 'Bradley Cooper']  
+>Q:Which of these mammals averages the largest litter?  
+>A: ['Naked mole rat', 'Burmese cat', 'Jackrabbit']  
 >  
 >BING SEARCH MODEL  
->Bing Guess: Bradley Cooper  
+>Bing Guess: Naked mole rat  
 >Guess is correct!  
->Bing Search Model took 5.403349876403809 seconds 
->  
+>Bing Search Model took 8.854448318481445 seconds  
 >WIKI SEARCH MODEL  
->Wiki Guess: Ryan Gosling  
->Wrong!  
->Wiki Search Model took 1.438279151916504 seconds  
-
+>Wiki Guess: Naked mole rat  
+>Guess is correct!  
 
 ## NLP
 ***Named Entity Recognition:***  
