@@ -29,11 +29,13 @@ $ python3 test.py
 ***Both Models Correct Example 1***  
 >Q: Which of these is a standard cheerleading jump?  
 >A: ['Herkie', 'Flap', 'Striker']  
->--BING SEARCH MODEL--  
+>  
+>BING SEARCH MODEL  
 >Bing Guess: Herkie  
 >Guess is correct!  
 >Bing Search Model took 2.7611379623413086 seconds  
->--WIKI SEARCH MODEL--  
+>  
+>WIKI SEARCH MODEL  
 >Wiki Guess: Herkie  
 >Guess is correct!  
 >Wiki Search Model took 0.8776249885559082 seconds  
@@ -41,11 +43,13 @@ $ python3 test.py
 ***Both Models Correct Example 2***  
 >Q: Which of these companies is NOT owned by Williams-Sonoma, Inc.?  
 >A: ['Pottery Barn', 'West Elm', 'Crate & Barrel']  
->--BING SEARCH MODEL--  
+>  
+>BING SEARCH MODEL  
 >Bing Guess: Crate & Barrel  
 >Guess is correct!  
 >Bing Search Model took 4.79827880859375 seconds  
-><WIKI SEARCH MODEL>  
+>  
+>WIKI SEARCH MODEL  
 >Wiki Guess: Crate & Barrel  
 >Guess is correct!  
 >Wiki Search Model took 1.7192120552062988 seconds  
@@ -53,11 +57,13 @@ $ python3 test.py
 ***Bing Model Wrong, Wiki Model Correct Example***  
 >Q: In a standard deck of playing cards, which king is holding an axe and facing sideways?  
 >A: ['King of Diamonds', 'King of Hearts', 'King of Clubs']  
->--BING SEARCH MODEL--  
+>  
+>BING SEARCH MODEL  
 >Bing Guess: King of Hearts  
 >Wrong!  
->Bing Search Model took 2.2626800537109375 seconds
->--WIKI SEARCH MODEL--  
+>Bing Search Model took 2.2626800537109375 seconds  
+>  
+>WIKI SEARCH MODEL  
 >Wiki Guess: King of Diamonds  
 >Guess is correct!  
 >Wiki Search Model took 1.7012982368469238 seconds  
@@ -65,7 +71,6 @@ $ python3 test.py
 ***Bing Model Correct, Wiki Model Wrong Example***  
 >Q: Which is the only actor to appear as both a student and a guest on "Inside the Actors Studio"?  
 >A: ['Ryan Gosling', 'Tobey Maguire', 'Bradley Cooper']  
->KW: ['actor', 'student', 'guest', '"inside the actors studio"']  
 >  
 >BING SEARCH MODEL  
 >Bing Guess: Bradley Cooper  
