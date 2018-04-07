@@ -31,8 +31,8 @@ The Bing Search Model uses Microsoft Azure's Bing Web Search API to retrieve a s
 ***Wikipedia Answer Model***   
 The Wikipedia Answer Model uses MediaWiki's Web API to retrieve JSON pages of Wikipedia articles for each of the answer choices, and then counts the number of times the key words co-occur within a 10-15 word window.  
 
-## Sample Results 
-***Example 1***  
+## Results 
+***Question 1***  
 >Q: Which of these is a standard cheerleading jump?  
 >A: ['Herkie', 'Flap', 'Striker']  
 >  
@@ -46,7 +46,7 @@ The Wikipedia Answer Model uses MediaWiki's Web API to retrieve JSON pages of Wi
 >Guess is correct!  
 >Wiki Search Model took 0.8776249885559082 seconds  
 
-***Example 2***  
+***Question 2***  
 >Q: Which of these companies is NOT owned by Williams-Sonoma, Inc.?  
 >A: ['Pottery Barn', 'West Elm', 'Crate & Barrel']  
 >  
@@ -60,7 +60,7 @@ The Wikipedia Answer Model uses MediaWiki's Web API to retrieve JSON pages of Wi
 >Guess is correct!  
 >Wiki Search Model took 1.7192120552062988 seconds  
 
-***Example 3***  
+***Question 3***  
 >Q: Which city’s busiest airport is NOT named after an elected politician?  
 >A: ['Oklahoma City', 'Houston', 'Las Vegas']  
 >  
@@ -74,7 +74,7 @@ The Wikipedia Answer Model uses MediaWiki's Web API to retrieve JSON pages of Wi
 >Guess is correct!  
 >Wiki Search Model took 1.8565549850463867 seconds  
 
-***Example 4***  
+***Question 4***  
 >Q:Which of these mammals averages the largest litter?  
 >A: ['Naked mole rat', 'Burmese cat', 'Jackrabbit']  
 >  
