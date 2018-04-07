@@ -66,11 +66,13 @@ $ python3 test.py
 >Q: Which is the only actor to appear as both a student and a guest on "Inside the Actors Studio"?  
 >A: ['Ryan Gosling', 'Tobey Maguire', 'Bradley Cooper']  
 >KW: ['actor', 'student', 'guest', '"inside the actors studio"']  
->--BING SEARCH MODEL--  
+>  
+>BING SEARCH MODEL  
 >Bing Guess: Bradley Cooper  
 >Guess is correct!  
->Bing Search Model took 5.403349876403809 seconds  
->--WIKI SEARCH MODEL--  
+>Bing Search Model took 5.403349876403809 seconds 
+>  
+>WIKI SEARCH MODEL  
 >Wiki Guess: Ryan Gosling  
 >Wrong!  
 >Wiki Search Model took 1.438279151916504 seconds  
