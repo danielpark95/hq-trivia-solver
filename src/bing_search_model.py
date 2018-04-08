@@ -1,17 +1,22 @@
-import requests, pprint, json, re
+import requests, pprint, json
 import urllib.request
+import re
+import pprint
 from bs4 import BeautifulSoup
 from markdown import markdown
 
 class AppURLopener(urllib.request.FancyURLopener):
     version = "Mozilla/5.0"
 
-subscription_key = "" # get a subscription key for free from Microsoft
+
+subscription_key = "1b10cb439d184096b730f1e066ec5d1a"
 class BingSearchModel(object):
 
 	def __init__(self, key_words, answers):
+
 		key_words_lower = self.lower_key_words(key_words)
 		answers_lower = self.lower_answers(answers)
+
 		kw_query = ' '.join(key_words_lower)
 
 		#print("kw_query = ", kw_query)
@@ -20,11 +25,17 @@ class BingSearchModel(object):
 		#pprint.pprint(kw_search_results)
 
 		dict_url = self.make_dict(kw_search_results)
+
 		#print ("BingSearchModel Key Words =", key_words)
 
-		final_counts = self.count_all_answer_appearances_in_dict(dict_url,answers,kw_search_results)
+		self.final_counts = self.count_all_answer_appearances_in_dict(dict_url,answers,kw_search_results)
 		#print("final counts =", final_counts)
-		self.guess = self.guess_answer(final_counts, key_words, answers)
+
+
+		self.guess = self.guess_answer(self.final_counts, key_words, answers)			
+		self.confidence = self.calculate_confidence(self.final_counts, key_words, answers)
+
+
 		#print("Bing guess =", guess)
 
 	def format_answer(self, answer):
@@ -32,6 +43,15 @@ class BingSearchModel(object):
 		answer_stripped_dq = answer_lower.replace('"','')
 		answer_stripped_sq = answer_stripped_dq.replace("'",'')
 		return answer_stripped_sq
+
+
+	def calculate_confidence(self, final_counts, key_words, answers):
+		sum_fc = sum(final_counts)
+		if sum_fc == 0:
+			return 0
+
+		else:
+			return 1
 
 	def count_answer_appearances_in_text (self, text, answer):
 		answer_formatted = self.format_answer(answer)
@@ -45,6 +65,7 @@ class BingSearchModel(object):
 				count += 1
 				last_index = curr_index + len(answer_formatted)
 		return count
+
 
 	def count_all_answer_appearances_in_text (self, text, answers):
 		count = [0,0,0]
@@ -139,3 +160,5 @@ class BingSearchModel(object):
 	def get_num_matches(self, json_page):
 		matches = json_page.get('webPages').get('totalEstimatedMatches')
 		return matches
+
+
