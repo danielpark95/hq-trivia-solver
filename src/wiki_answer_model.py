@@ -3,18 +3,18 @@ import requests
 import copy, re
 class WikiAnswerModel(object):
 	def __init__(self, key_words, answers):
-		print("initializing wiki answer model")
+		#print("initializing wiki answer model")
 		self.wiki_pages = self.get_wiki_pages(answers)
-		print("got wiki pages")
+		#print("got wiki pages")
 		self.total_cooccurrences_list = self.get_total_cooccurrences_list(self.wiki_pages, key_words)
 		
-		print("got total cooccurrences list")
+		#print("got total cooccurrences list")
 		self.guess = self.guess_answer(self.total_cooccurrences_list, key_words, answers)
 		
-		print("got guesses")
+		#print("got guesses")
 		self.all_cooccurrence_pairs = self.get_all_cooccurrence_pairs(self.wiki_pages,key_words)
 
-		print("got all occurrence pairs")
+		#print("got all occurrence pairs")
 
 	def get_all_cooccurrence_pairs(self, wiki_pages,key_words):
 		key_words_not_removed = list(key_words)
@@ -25,16 +25,16 @@ class WikiAnswerModel(object):
 		return all_cooccurrence_pairs
 
 	def get_total_cooccurrences_list(self, wiki_pages, key_words):
-		print("entered get_total_cooccurrences_list")
+		#print("entered get_total_cooccurrences_list")
 		key_words_not_removed = list(key_words)
 
 		if 'not' in key_words:
 			key_words_not_removed.remove('not')
 		cooccurrence_indices_list = [self.find_all_key_words_indices(wiki_pages[i],key_words_not_removed) for i in range(3)]
-		print("finished find_all_key_words_indices")
+		#print("finished find_all_key_words_indices")
 		total_cooccurrences_list = [self.total_cooccurrences(cooccurrence_indices_list[i]) for i in range(3)]
-		print("finished total_cooccurrences")
-		print("finished get_total_cooccurrences_list")
+		#print("finished total_cooccurrences")
+		#print("finished get_total_cooccurrences_list")
 		return total_cooccurrences_list
 
 	def convert_to_ascii(self, token):
@@ -95,7 +95,7 @@ class WikiAnswerModel(object):
 
 	def get_wiki_pages(self,answers):
 		pages = []
-		#print(answers)
+		##print(answers)
 		for answer in answers:
 			f = self.try_lower(answer)
 			page = ""
@@ -112,9 +112,9 @@ class WikiAnswerModel(object):
 					page = f.text.lower()
 			page = f.text.lower()
 			pages.append(page)
-			# print("answer =", answer)
-			#print("answer = ", answer)
-			#print("page = ", f.text[:100], "\n")
+			# #print("answer =", answer)
+			##print("answer = ", answer)
+			##print("page = ", f.text[:100], "\n")
 
 		return pages
 
@@ -161,8 +161,8 @@ class WikiAnswerModel(object):
 		for i in range(len(key_word_index_list1)):
 			for j in range(i+1,len(key_word_index_list2)):
 				if abs(key_word_index_list1[i] - key_word_index_list2[j]) <= window:
-					#print("difference =", key_word_index_list1[i] - key_word_index_list2[j])
-					#print(key_word_index_list1[i],"[",key_word1,"]",key_word_index_list2[j],"[",key_word2,"]")
+					##print("difference =", key_word_index_list1[i] - key_word_index_list2[j])
+					##print(key_word_index_list1[i],"[",key_word1,"]",key_word_index_list2[j],"[",key_word2,"]")
 					cooccurrence_pairs.append([key_word1,key_word2])
 		return cooccurrence_pairs
 
@@ -170,12 +170,12 @@ class WikiAnswerModel(object):
 	# list of index list for all key_words in a wiki page
 	def find_all_key_words_indices(self, page, key_words):
 		list = []
-		print("page =", page[:100])
-		print("key words =", key_words)
+		#print("page =", page[:100])
+		#print("key words =", key_words)
 		for i in range(len(key_words)):
-			print("i = {} started the loop".format(i))
+			#print("i = {} started the loop".format(i))
 			list.append(self.find_key_word_indices(page, key_words[i]))
-			print("i = {} ended the loop".format(i))
+			#print("i = {} ended the loop".format(i))
 		return list
 
 	# getFeatureIndices
@@ -183,17 +183,17 @@ class WikiAnswerModel(object):
 	def find_key_word_indices(self, page, key_word):
 		list = []
 		last_index = 0
-		print("entered find_key_word_indices")
+		#print("entered find_key_word_indices")
 		while key_word in page[last_index:]:
 			stripped_key_word = key_word.replace('"','')
 			if len(stripped_key_word) == 0:
 				break
-			print("stripped_key_word =", stripped_key_word)
+			#print("stripped_key_word =", stripped_key_word)
 			last_index = page.index(stripped_key_word, last_index)
 			list.append(last_index)
 			last_index += len(stripped_key_word)
-			print("last index =", last_index)
-		print("finished find_all_key_words_indices")
+			#print("last index =", last_index)
+		#print("finished find_all_key_words_indices")
 		return list
 
 
